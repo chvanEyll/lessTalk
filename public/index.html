@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html>
+   <!--includes-->
+   <head>
+      <title>lessTalk: more sharing</title>
+	  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	  <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.min.js"></script>
+      <script src = "app.js"></script>
+   </head>
+   
+   <body ng-app = "mainApp" ng-controller = "articleController">
+		<!--title bar-->
+		<div id="title">
+			<img ng-src="img/simple_title_gray.png"/>
+		</div>
+		
+		<!--add new article-->
+		<img id="addButton" ng-src="img/add_button.png" ng-click="addLink()"/>
+		<input type="text" ng-model="articleList.newArticleURL" name="" placeholder="Enter URL">
+   
+		<!--container for all articles-->
+		<div>
+		
+				<!--containers for each article-->
+				<div class="articleRow" ng-repeat = "article in articleList">
+					{{ article.rating }}
+					<a ng-href="{{article.url}}">{{ article.title }}</a>
+				</div>
+	
+		</div>
+      
+   </body>
+   
+</html>
