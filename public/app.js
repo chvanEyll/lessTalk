@@ -26,7 +26,5 @@ mainApp.controller('articleController', ['$scope', "$http", "$resource", functio
 		
 		}
 	
-	$scope.addButtonAction = $scope.generateInputBox; // default
-	
 	}
 ]);
